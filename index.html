@@ -14,71 +14,136 @@
         </header>
         <div id="main-form">
             <p id="description">Let us know how we can improve our services</p>
-            <form action="#" id="survey-form">
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name-label" placeholder="Your Name">
+            <form action="#" id="survey-form" method="GET">
+               
+                <div class="row">
+                    <div class="labels"></div>
+                        <label id="name-label" for="name">Name:</label>
+                    </div>
+                    <div class="right">
+                        <input autofocus type="text" name="name" id="name" placeholder="Your Name" class="input-field" required>
+                    </div>
+                </div>
                 
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email-label" placeholder="Your Email">
-
-                <label for="Age:">Age:</label>
-                <input type="number" name="number" id="number-label" placeholder="Your Age">
-
-                <label for="current-role">Which option best describes your current role?</label> 
-                <select name="current-role" id="dropdown-1">
-                    <option value="Student">Student</option>
-                    <option value="Full Time Job">Full Time Job</option>
-                    <option value="Part Time Learner">Part Time Learner</option>
-                    <option value="Prefer not to say">Prefer not to say</option>
-                    <option value="Other">Other</option>
-                </select>
-
+                <div class="row">
+                    <div class="labels"></div>
+                        <label for="email" id="email-label">Email:</label>
+                    </div>
+                    <div class="right">
+                        <input type="email" name="email" id="email" placeholder="Your Email" class="input-field" required>
+                    </div>
+                </div>
                 
-                <div id="recommend">
-                    <label for="recommend"> How likely is it that you'd recommend us to a friend? </label>
-
-                    <input type="radio" name="recommend" id="very">
-                    <label for="very">Very Likely</label>
-
-                    <input type="radio" name="recommend" id="somewhat">
-                    <label for="somewhat">Somewhat Likely</label>
-
-                    <input type="radio" name="recommend" id="not">
-                    <label for="not">Not Very Likely</label>
+                <div class="row">
+                    <div class="labels">
+                        <label for="Age:" id="number-label">Age:</label>
+                    </div>
+                    <div class="right">
+                        <input type="number" name="number" id="number" placeholder="Your Age" class="input-field" min="1" max="100">
+                    </div>
                 </div>
 
-                <label for="like-most"> What is it you like most about our services? </label>
-                <select name="like-most" id="dropdown-2">
-                    <option value="Student">Student</option>
-                    <option value="Full Time Job">Full Time Job</option>
-                    <option value="Part Time Learner">Part Time Learner</option>
-                    <option value="Prefer not to say">Prefer not to say</option>
-                    <option value="Other">Other</option>
-                </select>
-
-                <div id="additions">
-                    <label for="additions">What should we add next?</label>
-                    
-                    <label for="thing1">Thing 1</label>
-                    <input type="checkbox" name="thing1" id="thing1">
-
-                    <label for="thing1">Thing 2</label>
-                    <input type="checkbox" name="thing2" id="thing2">
-
-                    <label for="thing1">Thing 3</label>
-                    <input type="checkbox" name="thing3" id="thing3">
-
-                    <label for="thing1">Thing 4</label>
-                    <input type="checkbox" name="thing4" id="thing4">
-
-                    <label for="thing1">Thing 5</label>
-                    <input type="checkbox" name="thing5" id="thing5">
+                <div class="row">
+                    <div class="labels">
+                        <label for="role">Which option best describes your current role?</label> 
+                    </div>
+                    <div class="right">
+                        <select name="role" id="dropdown">
+                            <option disabled value>Select an option</option>
+                            <option value="Student">Student</option>
+                            <option value="Full Time Job">Full Time Job</option>
+                            <option value="Part Time Learner">Part Time Learner</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
                 </div>
-                <div id="suggestions">
-                    <p>Any Comments or Suggestions?</p>
-                    <textarea name="suggestions" id="suggestion-text" cols="50" rows="7" placeholder="Enter comments here..."></textarea>
+                
+                <div class="row">
+                    <div class="labels">
+                        <label for="recommend"> How likely is it that you'd recommend us to a friend? </label>
+                    </div>
+                    <div class="right">
+                        <ul style="list-style: none;">
+                            <li class="radio">
+                                <label>Very Likely
+                                    <input type="radio" value="1" name="radio-btns" class="userRatings">
+                                </label>
+                            </li>
+                            <li class="radio">
+                                <label>Somewhat Likely
+                                    <input type="radio" value="2" name="radio-btns" class="userRatings">
+                                </label>
+                            </li>
+                            <li class="radio">
+                                <label>Not Very Likely
+                                    <input type="radio" value="3" name="radio-btns" class="userRatings">
+                                </label>  
+                            </li>                           
+                        </ul>
+                    </div>
                 </div>
-                <button type="submit">Submit</button>
+
+                <div class="row">
+                    <div class="labels">
+                        <label for="like-most"> What is it you like most about our services? </label>
+                    </div>
+                    <div class="right">
+                        <select name="likeMost" id="like-most" class="dropdown">
+                            <option disabled selected value>Select an option</option>
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                            <option value="option4">Option 4</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="labels">
+                        <label for="additions">What should we add next? Check all that apply:</label>
+                    </div>
+                    <div class="right">
+                        <ul id="additions" style="list-style: none;">
+                            <li class="checkbox">
+                                <label><input type="checkbox" name="add" value="1" class="userRatings">Thing 1</label>
+                            </li>
+                            <li class="checkbox">
+                                <label><input type="checkbox" name="add" value="2" class="userRatings">Thing 2</label>
+                            </li>
+
+                            <li class="checkbox">
+                                <label><input type="checkbox" name="add" value="3" class="userRatings">Thing 3</label>
+                            </li>
+                            <li class="checkbox">
+                                <label><input type="checkbox" name="add" value="4" class="userRatings">Thing 4</label>
+                            </li>
+                            <li class="checkbox">
+                                <label><input type="checkbox" name="add" value="5" class="userRatings">Thing 5</label>
+                            </li>
+                            <li class="checkbox">
+                                <label><input type="checkbox" name="add" value="6" class="userRatings">Thing 6</label>
+                            </li>
+                            <li class="checkbox">
+                                <label><input type="checkbox" name="add" value="7" class="userRatings">Thing 7</label>
+                            </li>
+                            <li class="checkbox">
+                               <label><input type="checkbox" name="add" value="8" class="userRatings">Thing 8/label>
+                            </li>     
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row"></div>
+                    <div class="labels">
+                        <label for="suggestions">Any Comments or Suggestions?</label>
+                    </div>
+                    <div class="right">
+                        <textarea name="comment" class="input-field" style="height: 50px;resize:vertical;" id="suggestions" cols="50" rows="7" placeholder="Enter comments here..."></textarea>
+                    </div>
+                </div>
+                <button id="submit" type="submit">Submit</button>
             </form>
         </div>
     </div>

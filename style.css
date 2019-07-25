@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Heebo', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #9EE1DD;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#title {
+    padding: 2rem;
+}
+
+#description {
+    padding: 1.3rem;
+}
+
+#main-form {
+    background: #fff;
+    padding: 1.2rem;
+    width: 70vw;
+    margin: 0 auto;
+}
+
