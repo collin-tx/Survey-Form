@@ -8,6 +8,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="main">
+        <header class="header">
+            <h1 id="title">Survey Form</h1>
+        </header>
+        <div id="main-form">
+            <p id="description">Let us know how we can improve our services</p>
+            <form action="#" id="survey-form">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name-label" placeholder="Your Name">
+                
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email-label" placeholder="Your Email">
+
+                <label for="Age:">Age:</label>
+                <input type="number" name="number" id="number-label" placeholder="Your Age">
+
+                <label for="current-role">Which option best describes your current role?</label> 
+                <select name="current-role" id="dropdown-1">
+                    <option value="Student">Student</option>
+                    <option value="Full Time Job">Full Time Job</option>
+                    <option value="Part Time Learner">Part Time Learner</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                
+                <div id="recommend">
+                    <label for="recommend"> How likely is it that you'd recommend us to a friend? </label>
+
+                    <input type="radio" name="recommend" id="very">
+                    <label for="very">Very Likely</label>
+
+                    <input type="radio" name="recommend" id="somewhat">
+                    <label for="somewhat">Somewhat Likely</label>
+
+                    <input type="radio" name="recommend" id="not">
+                    <label for="not">Not Very Likely</label>
+                </div>
+
+                <label for="like-most"> What is it you like most about our services? </label>
+                <select name="like-most" id="dropdown-2">
+                    <option value="Student">Student</option>
+                    <option value="Full Time Job">Full Time Job</option>
+                    <option value="Part Time Learner">Part Time Learner</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <div id="additions">
+                    <label for="additions">What should we add next?</label>
+                    
+                    <label for="thing1">Thing 1</label>
+                    <input type="checkbox" name="thing1" id="thing1">
+
+                    <label for="thing1">Thing 2</label>
+                    <input type="checkbox" name="thing2" id="thing2">
+
+                    <label for="thing1">Thing 3</label>
+                    <input type="checkbox" name="thing3" id="thing3">
+
+                    <label for="thing1">Thing 4</label>
+                    <input type="checkbox" name="thing4" id="thing4">
+
+                    <label for="thing1">Thing 5</label>
+                    <input type="checkbox" name="thing5" id="thing5">
+                </div>
+                <div id="suggestions">
+                    <p>Any Comments or Suggestions?</p>
+                    <textarea name="suggestions" id="suggestion-text" cols="50" rows="7" placeholder="Enter comments here..."></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
     
 </body>
 </html>
