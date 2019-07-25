@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Heebo', Arial, Helvetica, sans-serif;
-}
+} */
 
+html,
 body {
     background: #9EE1DD;
     text-align: center;
     justify-content: center;
     align-content: center;
+    min-width: 320px;
+    font-family: 'Raleway', sans-serif;
 }
 
 #title {
     padding: 2rem;
+    font-weight: bold;
 }
 
 #description {
@@ -23,8 +26,79 @@ body {
 
 #main-form {
     background: #fff;
-    padding: 1.2rem;
-    width: 70vw;
+    padding: 5px;
+    max-width: 70vw;
     margin: 0 auto;
+    border-radius: 4px;
+    padding-top: 20px;
 }
 
+.labels {
+    display: inline-block;
+    text-align: right;
+    padding: 5px;
+    vertical-align: top;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.right {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+.userRatings,
+input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+.dropdown {
+    height: 35px;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+/* 
+#dropdown {
+    margin-left: 8px;
+} */
+
+.radio,
+.checkbox {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+#submit {
+    width: 96px;
+    height: 40px;
+    margin: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #59ace0;
+    border-radius: 4px;
+    border: 0px solid;
+}
+
+#submit:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
